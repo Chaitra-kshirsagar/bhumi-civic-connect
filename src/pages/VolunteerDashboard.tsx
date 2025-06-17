@@ -12,9 +12,9 @@ const useAuth = () => {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    // Simulate auth check
+    // Simulate auth check with a logged-in user
     setTimeout(() => {
-      setUser(null); // Set to null to show redirect behavior
+      setUser({ uid: 'mock-user-123', email: 'volunteer@example.com' }); // Simulate logged-in user
       setLoading(false);
     }, 1000);
   }, []);
